@@ -1,0 +1,26 @@
+import 'package:flutter/material.dart';
+
+class LittleRoot extends StatelessWidget {
+  final double x;
+  final double y;
+  final String currentMap;
+
+  LittleRoot({ required this.x, required this.y,required this.currentMap});
+
+  @override
+  Widget build(BuildContext context) {
+    if(currentMap == 'littelroot') {
+      return Container(
+        alignment: Alignment(x,y),
+        child: Image.asset(
+          'image/littelroot.png',
+          width: MediaQuery.of(context).size.width*0.75,
+          fit: BoxFit.cover,
+        ),
+      );
+    }
+    else{
+      return Container();
+    }
+  }
+}
